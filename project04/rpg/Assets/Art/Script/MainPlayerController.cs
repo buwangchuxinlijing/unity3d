@@ -51,12 +51,13 @@ public class MainPlayerController : MonoBehaviour
             lookPostion.Set(horizontal, vertical);
             //设置移动向量大小为动画移动速度，
             animator.SetFloat("Speed", lookPostion.magnitude);
+            Debug.Log("befor X: " + lookPostion.x + "   Y: " + lookPostion.y);
             //标准化向量长度为1
             lookPostion.Normalize();
             //将标准化的向量分类赋值给动画x 和 y参数
             animator.SetFloat("X", lookPostion.x);
             animator.SetFloat("Y", lookPostion.y);
-
+            Debug.Log("after X: " + lookPostion.x + "   Y: " + lookPostion.y);
 
 
 
